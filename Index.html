@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Livara · Customer Retention · CRM · Ecommerce Growth</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --cream:#F5F2EC;
+  --white:#FDFAF5;
+  --navy:#1A2235;
+  --navy-mid:#2C3A52;
+  --navy-light:#E8EBF0;
+  --sage:#8A9A82;
+  --sage-light:#E8EDE6;
+  --sage-dark:#5A6E54;
+  --muted:#6B6A66;
+  --border:rgba(26,34,53,0.1);
+  --border-light:rgba(26,34,53,0.06);
+}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--navy);line-height:1.6;font-size:16px;}
+
+/* NAV */
+nav{background:var(--white);border-bottom:1px solid var(--border-light);padding:1.25rem 3rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;}
+.logo-text{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:500;color:var(--navy);letter-spacing:0.12em;text-transform:uppercase;}
+nav ul{list-style:none;display:flex;gap:2.25rem;align-items:center;}
+nav a{text-decoration:none;color:var(--muted);font-size:0.82rem;font-weight:400;letter-spacing:0.03em;transition:color 0.2s;}
+nav a:hover{color:var(--navy);}
+.nav-cta{background:var(--navy)!important;color:white!important;padding:0.55rem 1.4rem;border-radius:2px;font-weight:500!important;letter-spacing:0.05em;font-size:0.8rem!important;text-transform:uppercase;}
+.nav-cta:hover{background:var(--navy-mid)!important;}
+
+/* HERO */
+.hero{background:var(--white);padding:7rem 3rem 6rem;display:grid;grid-template-columns:1.1fr 0.9fr;gap:5rem;align-items:center;max-width:1100px;margin:0 auto;}
+.eyebrow{font-size:0.7rem;font-weight:400;text-transform:uppercase;letter-spacing:0.14em;color:var(--sage);margin-bottom:1.5rem;display:flex;align-items:center;gap:0.6rem;}
+.eyebrow::before{content:'';display:block;width:24px;height:1px;background:var(--sage);}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,4.5vw,3.4rem);line-height:1.1;color:var(--navy);margin-bottom:1.5rem;font-weight:500;}
+.hero h1 em{font-style:italic;color:var(--sage-dark);}
+.hero-desc{font-size:0.95rem;color:var(--muted);line-height:1.8;font-weight:300;margin-bottom:2.25rem;max-width:420px;}
+.hero-buttons{display:flex;gap:0.875rem;flex-wrap:wrap;align-items:center;}
+.btn-primary{background:var(--navy);color:white;padding:0.85rem 2rem;text-decoration:none;font-weight:400;font-size:0.82rem;letter-spacing:0.06em;text-transform:uppercase;transition:background 0.2s;display:inline-block;}
+.btn-primary:hover{background:var(--navy-mid);}
+.btn-ghost{color:var(--navy);padding:0.85rem 1.5rem;text-decoration:none;font-weight:400;font-size:0.82rem;letter-spacing:0.06em;text-transform:uppercase;border:1px solid var(--border);transition:all 0.2s;display:inline-block;}
+.btn-ghost:hover{border-color:var(--navy);}
+
+/* HERO PROOF */
+.hero-proof{display:flex;flex-direction:column;gap:1px;border:1px solid var(--border);background:var(--border);}
+.proof-item{background:var(--white);padding:1.35rem 1.5rem;display:flex;justify-content:space-between;align-items:center;}
+.proof-num{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:500;color:var(--navy);line-height:1;}
+.proof-label{font-size:0.75rem;color:var(--muted);font-weight:300;letter-spacing:0.02em;text-align:right;max-width:140px;line-height:1.4;}
+
+/* RETENTION BAND */
+.retention-band{background:var(--navy);padding:4rem 3rem;}
+.retention-inner{max-width:800px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
+.retention-inner h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.4rem);font-weight:500;color:white;line-height:1.2;}
+.retention-inner h2 em{font-style:italic;color:#C0C8A8;}
+.retention-inner p{font-size:0.88rem;color:rgba(255,255,255,0.55);font-weight:300;line-height:1.8;}
+
+/* SECTIONS */
+.section{padding:5rem 3rem;max-width:920px;margin:0 auto;}
+.section-tag{font-size:0.68rem;font-weight:400;text-transform:uppercase;letter-spacing:0.14em;color:var(--sage);margin-bottom:1rem;display:flex;align-items:center;gap:0.6rem;}
+.section-tag::before{content:'';display:block;width:18px;height:1px;background:var(--sage);}
+h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.7rem,3vw,2.3rem);font-weight:500;color:var(--navy);line-height:1.15;margin-bottom:0.75rem;}
+h2 em{font-style:italic;color:var(--sage-dark);}
+.section-sub{font-size:0.9rem;color:var(--muted);font-weight:300;line-height:1.8;max-width:520px;margin-bottom:3rem;}
+
+/* WHY GRID */
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;border:1px solid var(--border);background:var(--border);}
+.why-item{background:var(--white);padding:1.75rem 1.5rem;}
+.why-num{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:400;color:var(--sage);line-height:1;margin-bottom:0.75rem;}
+.why-item h3{font-size:0.88rem;font-weight:500;color:var(--navy);margin-bottom:0.4rem;letter-spacing:0.02em;}
+.why-item p{font-size:0.8rem;color:var(--muted);font-weight:300;line-height:1.65;}
+
+/* STEPS */
+.steps{display:flex;flex-direction:column;gap:0;border:1px solid var(--border);}
+.step{display:grid;grid-template-columns:3rem 1fr;gap:1.5rem;padding:1.5rem 1.75rem;background:var(--white);border-bottom:1px solid var(--border-light);align-items:start;}
+.step:last-child{border-bottom:none;}
+.step-num{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--sage);line-height:1;margin-top:2px;}
+.step-body h3{font-size:0.9rem;font-weight:500;color:var(--navy);margin-bottom:0.3rem;letter-spacing:0.02em;}
+.step-body p{font-size:0.82rem;color:var(--muted);font-weight:300;line-height:1.7;}
+
+/* SERVICES */
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;}
+.svc{background:var(--white);border:1px solid var(--border-light);padding:1.75rem;transition:border-color 0.2s;}
+.svc:hover{border-color:var(--sage);}
+.svc-line{width:24px;height:2px;background:var(--sage);margin-bottom:1rem;}
+.svc h3{font-size:0.88rem;font-weight:500;color:var(--navy);margin-bottom:0.5rem;letter-spacing:0.02em;}
+.svc p{font-size:0.8rem;color:var(--muted);font-weight:300;line-height:1.65;}
+
+/* TIERS */
+.tiers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;border:1px solid var(--border);background:var(--border);}
+.tier{background:var(--white);padding:2rem 1.75rem;display:flex;flex-direction:column;}
+.tier.featured{background:var(--navy);}
+.tier-label{font-size:0.68rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--sage);margin-bottom:0.75rem;}
+.tier.featured .tier-label{color:#C0C8A8;}
+.tier-name{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:500;color:var(--navy);margin-bottom:0.5rem;}
+.tier.featured .tier-name{color:white;}
+.tier-desc{font-size:0.8rem;color:var(--muted);font-weight:300;line-height:1.65;margin-bottom:1.5rem;flex:1;}
+.tier.featured .tier-desc{color:rgba(255,255,255,0.5);}
+.tier-includes{list-style:none;display:flex;flex-direction:column;gap:0.45rem;margin-bottom:1.75rem;}
+.tier-includes li{font-size:0.78rem;color:var(--navy);display:flex;align-items:center;gap:0.6rem;}
+.tier.featured .tier-includes li{color:rgba(255,255,255,0.75);}
+.ck{width:14px;height:14px;border:1px solid var(--sage);display:inline-flex;align-items:center;justify-content:center;color:var(--sage);font-size:0.55rem;flex-shrink:0;}
+.tier.featured .ck{border-color:#C0C8A8;color:#C0C8A8;}
+.tier-cta{font-size:0.75rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--sage);text-decoration:none;font-weight:500;padding-top:0.5rem;border-top:1px solid var(--border-light);display:block;cursor:pointer;background:none;border-left:none;border-right:none;border-bottom:none;font-family:'DM Sans',sans-serif;text-align:left;}
+.tier.featured .tier-cta{color:#C0C8A8;border-color:rgba(255,255,255,0.1);}
+.tier-cta:hover{color:var(--navy);}
+.tier.featured .tier-cta:hover{color:white;}
+
+/* FOUNDER */
+.founder-box{background:var(--navy);padding:3rem;max-width:920px;margin:0 3rem 5rem;}
+.founder-inner{display:grid;grid-template-columns:1fr 2fr;gap:3rem;align-items:center;}
+.founder-initial{width:80px;height:80px;border:1px solid rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:400;color:rgba(255,255,255,0.5);margin-bottom:1rem;}
+.founder-title{font-size:0.7rem;text-transform:uppercase;letter-spacing:0.12em;color:rgba(255,255,255,0.4);margin-bottom:0.3rem;}
+.founder-name{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:400;color:white;}
+.founder-text h3{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:white;font-style:italic;margin-bottom:1rem;line-height:1.3;}
+.founder-text p{font-size:0.85rem;color:rgba(255,255,255,0.5);font-weight:300;line-height:1.8;}
+
+/* CONTACT */
+.contact-wrap{background:var(--white);border-top:1px solid var(--border-light);}
+.contact-inner{max-width:920px;margin:0 auto;padding:5rem 3rem;display:grid;grid-template-columns:1fr 1fr;gap:5rem;}
+.contact-left p{font-size:0.88rem;color:var(--muted);font-weight:300;line-height:1.8;margin-bottom:2rem;}
+.contact-detail{display:flex;flex-direction:column;gap:0.75rem;}
+.c-item{display:flex;gap:0.75rem;align-items:flex-start;}
+.c-label{font-size:0.68rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--sage);width:60px;flex-shrink:0;padding-top:1px;}
+.c-val{font-size:0.85rem;color:var(--navy);}
+.c-val a{color:var(--navy);text-decoration:none;border-bottom:1px solid var(--border);}
+.c-val a:hover{border-color:var(--navy);}
+
+/* FORM */
+.contact-form{display:flex;flex-direction:column;gap:1rem;}
+.field-label{font-size:0.68rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-bottom:0.3rem;display:block;}
+.contact-form input,
+.contact-form textarea,
+.contact-form select{width:100%;padding:0.75rem 0;background:transparent;border:none;border-bottom:1px solid var(--border);color:var(--navy);font-family:'DM Sans',sans-serif;font-size:0.88rem;outline:none;transition:border-color 0.2s;font-weight:300;appearance:none;}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder{color:rgba(26,34,53,0.3);}
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus{border-color:var(--navy);}
+.contact-form textarea{height:80px;resize:none;}
+.contact-form select{color:rgba(26,34,53,0.5);cursor:pointer;}
+.contact-form select.selected{color:var(--navy);}
+.btn-navy{background:var(--navy);color:white;padding:0.85rem 2rem;font-weight:400;font-size:0.8rem;letter-spacing:0.07em;text-transform:uppercase;border:none;cursor:pointer;width:100%;font-family:'DM Sans',sans-serif;transition:background 0.2s;margin-top:0.5rem;}
+.btn-navy:hover{background:var(--navy-mid);}
+
+/* SUCCESS MESSAGE */
+.form-success{display:none;background:var(--sage-light);border:1px solid var(--sage);padding:1.5rem;text-align:center;}
+.form-success p{font-size:0.88rem;color:var(--sage-dark);font-weight:400;}
+
+footer{background:var(--navy);padding:1.5rem 3rem;display:flex;align-items:center;justify-content:space-between;}
+.footer-logo{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:400;color:rgba(255,255,255,0.4);letter-spacing:0.12em;text-transform:uppercase;}
+.footer-right{font-size:0.72rem;color:rgba(255,255,255,0.25);font-weight:300;letter-spacing:0.04em;}
+
+@media(max-width:700px){
+  nav{padding:1.25rem 1.5rem;}
+  nav ul{gap:1rem;}
+  .hero{grid-template-columns:1fr;padding:4rem 1.5rem;gap:3rem;}
+  .hero-proof{display:none;}
+  .retention-inner{grid-template-columns:1fr;gap:2rem;}
+  .why-grid{grid-template-columns:1fr 1fr;}
+  .tiers-grid{grid-template-columns:1fr;}
+  .founder-inner{grid-template-columns:1fr;}
+  .founder-box{margin:0 1.5rem 4rem;}
+  .contact-inner{grid-template-columns:1fr;gap:3rem;padding:3rem 1.5rem;}
+  .section{padding:4rem 1.5rem;}
+  footer{flex-direction:column;gap:0.5rem;text-align:center;padding:1.5rem;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo-text">Livara</div>
+  <ul>
+    <li><a href="#why">Why Livara</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#contact" class="nav-cta">Get in touch</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div style="background:var(--white);">
+  <div class="hero">
+    <div class="hero-left">
+      <div class="eyebrow">Customer Retention · CRM · Ecommerce Growth</div>
+      <h1>More repeat customers.<br>More revenue.<br><em>Less guesswork.</em></h1>
+      <p class="hero-desc">Livara helps independent boutiques and lifestyle retailers unlock sustainable growth through customer retention, CRM strategy and Shopify optimisation.</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn-primary">Book a consultation</a>
+        <a href="#pricing" class="btn-ghost">Our services →</a>
+      </div>
+    </div>
+    <div class="hero-proof">
+      <div class="proof-item">
+        <div class="proof-num">1,247</div>
+        <div class="proof-label">Dormant customers reactivated</div>
+      </div>
+      <div class="proof-item">
+        <div class="proof-num">12% → 48%</div>
+        <div class="proof-label">Repeat purchase rate increase</div>
+      </div>
+      <div class="proof-item">
+        <div class="proof-num">+€70</div>
+        <div class="proof-label">Average order value uplift</div>
+      </div>
+      <div class="proof-item">
+        <div class="proof-num">47%</div>
+        <div class="proof-label">Monthly revenue from CRM campaigns</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHY RETENTION -->
+<div class="retention-band" id="why">
+  <div class="retention-inner">
+    <h2>The most valuable customers are the ones <em>you already have</em></h2>
+    <p>Acquiring a new customer costs significantly more than selling to an existing one. Yet most retailers spend the majority of their time and budget chasing new customers while overlooking the revenue sitting inside their existing customer database.<br><br>Livara helps independent retailers maximise the value of every customer relationship through retention, loyalty and smarter CRM strategy.</p>
+  </div>
+</div>
+
+<!-- WHY LIVARA -->
+<div class="section">
+  <div class="section-tag">Why Livara</div>
+  <h2>Practical expertise. <em>Real results.</em></h2>
+  <p class="section-sub">Commercially focused recommendations built around the realities of independent retail.</p>
+
+  <div class="why-grid">
+    <div class="why-item">
+      <div class="why-num">01</div>
+      <h3>Real retail experience</h3>
+      <p>We have worked inside boutique retail, not just consulted from the outside.</p>
+    </div>
+    <div class="why-item">
+      <div class="why-num">02</div>
+      <h3>CRM-led growth</h3>
+      <p>Every recommendation is grounded in customer data and purchase behaviour.</p>
+    </div>
+    <div class="why-item">
+      <div class="why-num">03</div>
+      <h3>Shopify specialists</h3>
+      <p>Klaviyo, Omnisend, Mailchimp — we know the platforms independent retailers use.</p>
+    </div>
+    <div class="why-item">
+      <div class="why-num">04</div>
+      <h3>No jargon</h3>
+      <p>Practical recommendations you can actually implement, not marketing waffle.</p>
+    </div>
+    <div class="why-item">
+      <div class="why-num">05</div>
+      <h3>Results focused</h3>
+      <p>We measure success by the revenue and retention improvements we deliver for your business.</p>
+    </div>
+    <div class="why-item">
+      <div class="why-num">06</div>
+      <h3>Long-term partnerships</h3>
+      <p>We invest in understanding your business so that our work compounds in value over time.</p>
+    </div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<div style="background:var(--white);border-top:1px solid var(--border-light);border-bottom:1px solid var(--border-light);">
+  <div class="section" id="how">
+    <div class="section-tag">How it works</div>
+    <h2>A straightforward <em>process</em></h2>
+    <p class="section-sub">No complicated onboarding. No long contracts. Just a clear path from where you are to where you want to be.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-body">
+          <h3>Discovery call</h3>
+          <p>A conversation about your business, your customers and where you feel growth is being left on the table.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-body">
+          <h3>Business review</h3>
+          <p>We audit your website, CRM, email setup and customer journey to identify specific, measurable opportunities.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-body">
+          <h3>Audit delivery</h3>
+          <p>A clear report with prioritised revenue opportunities. No vague recommendations, no padding.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <div class="step-body">
+          <h3>Implementation</h3>
+          <p>We handle the execution, or hand everything over with full guidance. You choose what works for your business.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<div class="section" id="services">
+  <div class="section-tag">Services</div>
+  <h2>Everything your customer journey <em>needs</em></h2>
+  <p class="section-sub">From the moment someone discovers your store to the moment they become a loyal returning buyer, we work across the full lifecycle.</p>
+  <div class="services-grid">
+    <div class="svc">
+      <div class="svc-line"></div>
+      <h3>Email Marketing</h3>
+      <p>Campaigns, automations and flows that feel personal and drive real sales, not just open rates.</p>
+    </div>
+    <div class="svc">
+      <div class="svc-line"></div>
+      <h3>Customer Reactivation</h3>
+      <p>Win-back sequences built on actual purchase behaviour that bring lapsed customers back.</p>
+    </div>
+    <div class="svc">
+      <div class="svc-line"></div>
+      <h3>Shopify Optimisation</h3>
+      <p>Post-purchase flows, checkout and product pages all working harder for your revenue.</p>
+    </div>
+    <div class="svc">
+      <div class="svc-line"></div>
+      <h3>CRM Strategy</h3>
+      <p>We set up and manage your CRM tools so they consistently generate revenue, month after month.</p>
+    </div>
+  </div>
+</div>
+
+<!-- PRICING TIERS -->
+<div style="background:var(--white);border-top:1px solid var(--border-light);border-bottom:1px solid var(--border-light);">
+  <div class="section" id="pricing">
+    <div class="section-tag">Pricing</div>
+    <h2>Choose the right <em>engagement</em></h2>
+    <p class="section-sub">Every business is different. Get in touch and we will put together a proposal tailored to where you are and where you want to go.</p>
+
+    <div class="tiers-grid">
+      <div class="tier">
+        <div class="tier-label">Starter</div>
+        <div class="tier-name">Growth Audit</div>
+        <p class="tier-desc">A thorough review of your customer journey, CRM and email setup. You receive a prioritised action plan with specific revenue opportunities identified.</p>
+        <ul class="tier-includes">
+          <li><span class="ck">✓</span> Website &amp; Shopify review</li>
+          <li><span class="ck">✓</span> Email &amp; CRM health check</li>
+          <li><span class="ck">✓</span> Customer journey audit</li>
+          <li><span class="ck">✓</span> Prioritised action plan</li>
+          <li><span class="ck">✓</span> 30-minute debrief call</li>
+        </ul>
+        <button class="tier-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});document.getElementById('service-select').value='Growth Audit';document.getElementById('service-select').classList.add('selected');">Enquire about this →</button>
+      </div>
+
+      <div class="tier featured">
+        <div class="tier-label">Most popular</div>
+        <div class="tier-name">Retention Partner</div>
+        <p class="tier-desc">Ongoing retention and CRM management for retailers who want consistent, compounding results without handling the day-to-day themselves.</p>
+        <ul class="tier-includes">
+          <li><span class="ck">✓</span> Monthly email campaigns</li>
+          <li><span class="ck">✓</span> Customer reactivation sequences</li>
+          <li><span class="ck">✓</span> CRM management &amp; reporting</li>
+          <li><span class="ck">✓</span> Shopify optimisation</li>
+          <li><span class="ck">✓</span> Monthly performance review</li>
+        </ul>
+        <button class="tier-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});document.getElementById('service-select').value='Retention Partner';document.getElementById('service-select').classList.add('selected');">Enquire about this →</button>
+      </div>
+
+      <div class="tier">
+        <div class="tier-label">Full service</div>
+        <div class="tier-name">Growth Partnership</div>
+        <p class="tier-desc">A comprehensive engagement covering strategy, execution and reporting across your full customer lifecycle. Built for retailers ready to scale.</p>
+        <ul class="tier-includes">
+          <li><span class="ck">✓</span> Everything in Retention Partner</li>
+          <li><span class="ck">✓</span> Full CRM strategy &amp; setup</li>
+          <li><span class="ck">✓</span> Loyalty programme design</li>
+          <li><span class="ck">✓</span> Customer segmentation</li>
+          <li><span class="ck">✓</span> Quarterly business review</li>
+        </ul>
+        <button class="tier-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});document.getElementById('service-select').value='Growth Partnership';document.getElementById('service-select').classList.add('selected');">Enquire about this →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOUNDER -->
+<div style="padding: 0 3rem 5rem; max-width: 920px; margin: 0 auto;">
+  <div class="founder-box">
+    <div class="founder-inner">
+      <div>
+        <div class="founder-initial">L</div>
+        <div class="founder-title">Founded in Dublin</div>
+        <div class="founder-name">Livara</div>
+      </div>
+      <div class="founder-text">
+        <h3>"Livara was founded after seeing independent retailers repeatedly invest in customer acquisition while overlooking significant revenue opportunities within their existing customer base."</h3>
+        <p>We believe sustainable growth comes from stronger customer relationships, not simply spending more on advertising. Livara works directly with every client to ensure recommendations are practical, commercially focused and tailored to the realities of independent retail.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div class="contact-wrap" id="contact">
+  <div class="contact-inner">
+    <div class="contact-left">
+      <div class="section-tag">Get in touch</div>
+      <h2>Let's have a<br><em>conversation</em></h2>
+      <p>No sales pitch. No pressure. A straightforward conversation about your business and whether we can help you grow.</p>
+      <div class="contact-detail">
+        <div class="c-item">
+          <div class="c-label">Email</div>
+          <div class="c-val"><a href="mailto:liv@livara.ie">liv@livara.ie</a></div>
+        </div>
+        <div class="c-item">
+          <div class="c-label">Focus</div>
+          <div class="c-val">Independent retail &amp; lifestyle brands</div>
+        </div>
+        <div class="c-item">
+          <div class="c-label">Replies</div>
+          <div class="c-val">Within one business day</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FORMSPREE FORM — replace YOUR_FORM_ID with your Formspree form ID -->
+    <!-- Sign up at formspree.io, create a form pointed at liv@livara.ie, copy the form ID -->
+    <div>
+      <form
+        id="contact-form"
+        class="contact-form"
+        action="https://formspree.io/f/YOUR_FORM_ID"
+        method="POST"
+        onsubmit="handleSubmit(event)"
+      >
+        <!-- Hidden field so Formspree knows where to send replies -->
+        <input type="hidden" name="_replyto" value="liv@livara.ie">
+        <input type="hidden" name="_subject" id="email-subject" value="New Livara enquiry">
+
+        <div>
+          <label class="field-label" for="name">Your name</label>
+          <input type="text" id="name" name="name" placeholder="e.g. Sarah Murphy" required />
+        </div>
+        <div>
+          <label class="field-label" for="email">Email address</label>
+          <input type="email" id="email" name="email" placeholder="sarah@yourboutique.ie" required />
+        </div>
+        <div>
+          <label class="field-label" for="shop">Shop name &amp; website</label>
+          <input type="text" id="shop" name="shop" placeholder="The Little Boutique · thelittleboutique.ie" />
+        </div>
+        <div>
+          <label class="field-label" for="service-select">Service interested in</label>
+          <select id="service-select" name="service" onchange="this.classList.add('selected');updateSubject()">
+            <option value="" disabled selected>Select a service</option>
+            <option value="Growth Audit">Growth Audit</option>
+            <option value="Retention Partner">Retention Partner</option>
+            <option value="Growth Partnership">Growth Partnership</option>
+            <option value="Not sure yet">Not sure yet</option>
+          </select>
+        </div>
+        <div>
+          <label class="field-label" for="message">Tell us about your business</label>
+          <textarea id="message" name="message" placeholder="What you sell, where you are, what you would like to improve..."></textarea>
+        </div>
+        <button type="submit" class="btn-navy">Send message →</button>
+      </form>
+
+      <div class="form-success" id="form-success">
+        <p>Thank you. We will be in touch within one business day.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">Livara</div>
+  <div class="footer-right">© 2024 Livara · Customer Retention · CRM · Ecommerce Growth</div>
+</footer>
+
+<script>
+  function updateSubject() {
+    var service = document.getElementById('service-select').value;
+    if (service) {
+      document.getElementById('email-subject').value = 'New Livara enquiry: ' + service;
+    }
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    var form = document.getElementById('contact-form');
+    var data = new FormData(form);
+
+    fetch(form.action, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    }).then(function(response) {
+      if (response.ok) {
+        form.style.display = 'none';
+        document.getElementById('form-success').style.display = 'block';
+      } else {
+        alert('Something went wrong. Please email us directly at liv@livara.ie');
+      }
+    }).catch(function() {
+      alert('Something went wrong. Please email us directly at liv@livara.ie');
+    });
+  }
+</script>
+
+</body>
+</html>
