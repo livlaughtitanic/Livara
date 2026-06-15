@@ -1,9 +1,9 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Livara · Customer Retention · CRM · Ecommerce Growth</title>
+<title>Livara · Data · Website · Social</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
@@ -24,15 +24,21 @@
 }
 html{scroll-behavior:smooth;}
 body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--navy);line-height:1.6;font-size:16px;}
- 
+
 nav{background:var(--navy);border-bottom:1px solid var(--border-white);padding:1.25rem 3rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;}
-.logo-text{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:500;color:white;letter-spacing:0.14em;text-transform:uppercase;}
+.logo-text{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:500;color:white;letter-spacing:0.14em;text-transform:uppercase;text-decoration:none;}
+.logo-img img{height:32px;width:auto;display:block;}
 nav ul{list-style:none;display:flex;gap:2.5rem;align-items:center;}
 nav a{text-decoration:none;color:rgba(255,255,255,0.45);font-size:0.78rem;font-weight:400;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s;}
 nav a:hover{color:white;}
 .nav-cta{background:var(--gold)!important;color:var(--navy)!important;padding:0.55rem 1.5rem;font-weight:500!important;letter-spacing:0.06em;font-size:0.75rem!important;transition:opacity 0.2s!important;}
 .nav-cta:hover{opacity:0.85!important;}
- 
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:0.5rem;flex-direction:column;gap:5px;}
+.nav-toggle span{display:block;width:22px;height:1px;background:rgba(255,255,255,0.7);transition:all 0.25s ease;}
+.nav-toggle.open span:nth-child(1){transform:translateY(6px) rotate(45deg);}
+.nav-toggle.open span:nth-child(2){opacity:0;}
+.nav-toggle.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg);}
+
 .hero-wrap{background:var(--navy);position:relative;overflow:hidden;}
 .hero-wrap::before{content:'';position:absolute;top:-300px;right:-200px;width:700px;height:700px;background:radial-gradient(circle,rgba(138,154,130,0.06) 0%,transparent 65%);pointer-events:none;}
 .hero-wrap::after{content:'';position:absolute;bottom:-150px;left:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(201,169,110,0.04) 0%,transparent 65%);pointer-events:none;}
@@ -47,20 +53,20 @@ nav a:hover{color:white;}
 .btn-gold:hover{opacity:0.85;}
 .btn-outline{color:rgba(255,255,255,0.5);padding:0.95rem 1.75rem;text-decoration:none;font-weight:400;font-size:0.78rem;letter-spacing:0.08em;text-transform:uppercase;border:1px solid rgba(255,255,255,0.15);transition:all 0.2s;display:inline-block;}
 .btn-outline:hover{border-color:rgba(255,255,255,0.4);color:white;}
- 
+
 .stats-bar{max-width:960px;margin:0 auto;padding:0 3rem;position:relative;z-index:1;}
 .stats-inner{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,0.06);margin-top:4rem;border-top:1px solid rgba(255,255,255,0.06);}
 .stat{background:var(--navy);padding:1.5rem 2rem;text-align:center;}
 .stat-num{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:500;color:var(--gold);display:block;line-height:1;margin-bottom:0.3rem;}
 .stat-label{font-size:0.65rem;text-transform:uppercase;letter-spacing:0.08em;color:rgba(255,255,255,0.3);font-weight:300;}
- 
+
 .platforms-wrap{background:var(--navy);padding-bottom:3.5rem;}
 .platforms{max-width:960px;margin:0 auto;padding:2rem 3rem 0;display:flex;align-items:center;gap:0;flex-wrap:wrap;}
 .platforms-label{font-size:0.62rem;text-transform:uppercase;letter-spacing:0.12em;color:rgba(255,255,255,0.2);white-space:nowrap;border-right:1px solid rgba(255,255,255,0.08);padding-right:2.5rem;margin-right:2.5rem;}
-.platform-list{display:flex;align-items:center;gap:2.5rem;flex-wrap:wrap;}
-.platform{font-size:0.72rem;font-weight:400;color:rgba(255,255,255,0.18);letter-spacing:0.1em;text-transform:uppercase;transition:color 0.2s;}
-.platform:hover{color:rgba(255,255,255,0.4);}
- 
+.logo-list{display:flex;align-items:center;gap:2.5rem;flex-wrap:wrap;}
+.logo-list img{height:24px;width:auto;max-width:95px;object-fit:contain;opacity:0.4;filter:grayscale(100%) brightness(2);transition:opacity 0.2s;}
+.logo-list img:hover{opacity:0.75;}
+
 .light-section{background:var(--white);border-top:1px solid var(--border-light);}
 .cream-section{background:var(--cream);border-top:1px solid var(--border-light);}
 .section{padding:5.5rem 3rem;max-width:960px;margin:0 auto;}
@@ -69,7 +75,7 @@ nav a:hover{color:white;}
 h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.4rem);font-weight:500;color:var(--navy);line-height:1.12;margin-bottom:0.75rem;}
 h2 em{font-style:italic;color:var(--sage-dark);}
 .section-sub{font-size:0.88rem;color:var(--muted);font-weight:300;line-height:1.85;max-width:500px;margin-bottom:3rem;}
- 
+
 .case-study-block{background:var(--navy);padding:3rem;}
 .cs-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:2.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border-white);}
 .cs-tag{font-size:0.62rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--gold);}
@@ -83,27 +89,29 @@ h2 em{font-style:italic;color:var(--sage-dark);}
 .cs-result{background:var(--navy-card);padding:1.1rem 1.5rem;display:flex;align-items:center;gap:1.25rem;}
 .cs-result-num{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:500;color:var(--gold);line-height:1;min-width:90px;}
 .cs-result-text{font-size:0.78rem;color:rgba(255,255,255,0.45);font-weight:300;line-height:1.45;}
- 
+
 .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;border:1px solid var(--border);background:var(--border);}
 .why-item{background:var(--white);padding:1.75rem 1.5rem;}
 .why-num{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:400;color:var(--sage);line-height:1;margin-bottom:0.75rem;}
 .why-item h3{font-size:0.85rem;font-weight:500;color:var(--navy);margin-bottom:0.4rem;letter-spacing:0.02em;}
 .why-item p{font-size:0.78rem;color:var(--muted);font-weight:300;line-height:1.7;}
- 
+
 .steps{border:1px solid var(--border);}
 .step{display:grid;grid-template-columns:3rem 1fr;gap:1.5rem;padding:1.5rem 1.75rem;background:var(--white);border-bottom:1px solid var(--border-light);}
 .step:last-child{border-bottom:none;}
 .step-num{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:400;color:var(--sage);line-height:1;margin-top:2px;}
 .step h3{font-size:0.85rem;font-weight:500;color:var(--navy);margin-bottom:0.3rem;}
 .step p{font-size:0.8rem;color:var(--muted);font-weight:300;line-height:1.7;}
- 
-.svc-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;border:1px solid var(--border);background:var(--border);}
-.svc{background:var(--white);padding:1.75rem 1.5rem;transition:background 0.2s;}
-.svc:hover{background:var(--cream);}
+
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;border:1px solid var(--border);background:var(--border);}
+.svc-group{background:var(--white);padding:1.75rem 1.5rem;transition:background 0.2s;}
+.svc-group:hover{background:var(--cream);}
 .svc-line{width:20px;height:1px;background:var(--gold);margin-bottom:1.1rem;}
-.svc h3{font-size:0.83rem;font-weight:500;color:var(--navy);margin-bottom:0.5rem;}
-.svc p{font-size:0.76rem;color:var(--muted);font-weight:300;line-height:1.65;}
- 
+.svc-group h3{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:500;color:var(--navy);margin-bottom:0.85rem;}
+.svc-group ul{list-style:none;display:flex;flex-direction:column;gap:0.5rem;}
+.svc-group ul li{font-size:0.78rem;color:var(--muted);font-weight:300;line-height:1.6;padding-left:0.9rem;position:relative;}
+.svc-group ul li::before{content:'';position:absolute;left:0;top:0.55em;width:5px;height:5px;background:var(--sage);border-radius:50%;}
+
 .ways-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;border:1px solid var(--border);background:var(--border);}
 .way{background:var(--white);padding:2rem 1.75rem;display:flex;flex-direction:column;}
 .way.featured{background:var(--navy);}
@@ -122,24 +130,26 @@ h2 em{font-style:italic;color:var(--sage-dark);}
 .way.featured .way-cta{color:var(--gold);border-color:rgba(255,255,255,0.08);}
 .way-cta:hover{color:var(--navy);}
 .way.featured .way-cta:hover{color:white;}
- 
+
 .urgency{background:var(--navy);padding:4.5rem 3rem;text-align:center;}
 .urgency-inner{max-width:580px;margin:0 auto;}
 .urgency-inner p.urgency-main{font-family:'Cormorant Garamond',serif;font-size:clamp(1.4rem,2.5vw,1.9rem);font-weight:400;color:white;line-height:1.4;margin-bottom:1rem;}
 .urgency-inner p.urgency-sub{font-size:0.85rem;color:rgba(255,255,255,0.4);font-weight:300;margin-bottom:2rem;line-height:1.7;}
- 
+
 .about-block{background:var(--white);border-top:1px solid var(--border-light);}
 .about-inner{max-width:960px;margin:0 auto;padding:5.5rem 3rem;}
 .about-inner .section-tag{margin-bottom:1.25rem;}
 .about-inner h2{margin-bottom:1.5rem;}
 .about-body{font-size:0.9rem;color:var(--muted);font-weight:300;line-height:1.9;max-width:620px;}
 .about-body p{margin-bottom:1rem;}
-.about-results{margin-top:2.5rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;border:1px solid var(--border);background:var(--border);}
+.about-results{margin-top:2.5rem;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;border:1px solid var(--border);background:var(--border);}
 .ar-item{background:var(--cream);padding:1.25rem 1rem;text-align:center;}
 .ar-num{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:500;color:var(--navy);display:block;line-height:1;margin-bottom:0.3rem;}
 .ar-label{font-size:0.65rem;color:var(--muted);font-weight:300;text-transform:uppercase;letter-spacing:0.06em;line-height:1.4;}
-.signoff{margin-top:2.5rem;font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-style:italic;color:var(--sage-dark);}
- 
+.signoff{margin-top:2.5rem;}
+.signoff-name{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-style:italic;color:var(--sage-dark);}
+.signoff-title{font-size:0.7rem;color:var(--muted);font-weight:300;text-transform:uppercase;letter-spacing:0.08em;margin-top:0.2rem;}
+
 .contact-wrap{background:var(--white);border-top:1px solid var(--border-light);}
 .contact-inner{max-width:960px;margin:0 auto;padding:5.5rem 3rem;display:grid;grid-template-columns:1fr 1.1fr;gap:5rem;}
 .contact-left p{font-size:0.85rem;color:var(--muted);font-weight:300;line-height:1.85;margin-bottom:2rem;}
@@ -161,87 +171,141 @@ h2 em{font-style:italic;color:var(--sage-dark);}
 .btn-submit:hover{background:var(--navy-mid);}
 .form-ok{display:none;background:var(--sage-light);border:1px solid var(--sage);padding:1.5rem;text-align:center;}
 .form-ok p{font-size:0.85rem;color:var(--sage-dark);}
- 
-footer{background:var(--navy);padding:1.5rem 3rem;display:flex;align-items:center;justify-content:space-between;}
+
+footer{background:var(--navy);padding:1.5rem 3rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
 .footer-logo{font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:rgba(255,255,255,0.3);letter-spacing:0.14em;text-transform:uppercase;}
 .footer-copy{font-size:0.68rem;color:rgba(255,255,255,0.2);font-weight:300;letter-spacing:0.04em;}
- 
+.footer-links{display:flex;gap:1.5rem;flex-wrap:wrap;}
+.footer-links a{font-size:0.68rem;color:rgba(255,255,255,0.3);text-decoration:none;letter-spacing:0.04em;transition:color 0.2s;}
+.footer-links a:hover{color:rgba(255,255,255,0.6);}
+
 .dark-h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.4rem);font-weight:500;color:white;line-height:1.12;margin-bottom:0.75rem;}
 .dark-h2 em{font-style:italic;color:#C0C8A8;}
- 
+
 @media(max-width:760px){
-  nav{padding:1.1rem 1.5rem;}
-  nav ul li:not(:last-child){display:none;}
-  .hero{padding:4rem 1.5rem 0;}
-  .stats-inner{grid-template-columns:1fr 1fr;}
-  .stats-bar{padding:0 1.5rem;}
-  .platforms{padding:1.5rem;gap:1rem;}
-  .platforms-label{border-right:none;padding-right:0;margin-right:0;margin-bottom:0.75rem;width:100%;}
-  .section{padding:4rem 1.5rem;}
-  .cs-grid{grid-template-columns:1fr;}
-  .why-grid{grid-template-columns:1fr 1fr;}
-  .svc-grid{grid-template-columns:1fr 1fr;}
+  nav{padding:1rem 1.5rem;position:relative;}
+  .nav-toggle{display:flex;}
+  nav ul{
+    list-style:none;display:flex;flex-direction:column;align-items:flex-start;gap:0;
+    position:absolute;top:100%;left:0;right:0;background:var(--navy);
+    border-bottom:1px solid var(--border-white);
+    max-height:0;overflow:hidden;transition:max-height 0.3s ease;
+  }
+  nav ul.open{max-height:320px;}
+  nav ul li{width:100%;}
+  nav ul li a{display:block;padding:1rem 1.5rem;width:100%;border-bottom:1px solid var(--border-white);}
+  nav ul li:last-child a{border-bottom:none;}
+  .nav-cta{margin:1rem 1.5rem;display:block;text-align:center;width:calc(100% - 3rem);}
+
+  .hero{padding:3rem 1.25rem 0;}
+  .hero h1{font-size:clamp(2rem,8vw,2.6rem);}
+  .hero-sub{font-size:0.88rem;}
+  .hero-buttons{width:100%;}
+  .hero-buttons .btn-gold{width:100%;text-align:center;}
+
+  .stats-bar{padding:0 1.25rem;}
+  .stats-inner{grid-template-columns:1fr 1fr;margin-top:2.5rem;}
+  .stat{padding:1.1rem 0.75rem;}
+  .stat-num{font-size:1.5rem;}
+
+  .platforms-wrap{padding-bottom:2.5rem;}
+  .platforms{padding:1.5rem 1.25rem 0;flex-direction:column;align-items:flex-start;gap:1rem;}
+  .platforms-label{border-right:none;padding-right:0;margin-right:0;width:100%;}
+  .logo-list{gap:1.5rem;width:100%;justify-content:flex-start;}
+  .logo-list img{height:20px;}
+
+  .section{padding:3.5rem 1.25rem;}
+  .section-sub{max-width:100%;}
+
+  .case-study-block{padding:1.75rem;}
+  .cs-grid{grid-template-columns:1fr;gap:2rem;}
+  .cs-left h3{font-size:1.15rem;}
+
+  .dark-h2{font-size:clamp(1.5rem,6vw,2rem);}
+  div[style*="grid-template-columns:1fr 1fr"].retention-inner{grid-template-columns:1fr!important;gap:2rem!important;}
+
+  .why-grid{grid-template-columns:1fr;}
+  .svc-grid{grid-template-columns:1fr;}
   .ways-grid{grid-template-columns:1fr;}
+
+  .steps .step{padding:1.25rem;gap:1rem;}
+
   .about-results{grid-template-columns:1fr 1fr;}
-  .contact-inner{grid-template-columns:1fr;gap:3rem;padding:3.5rem 1.5rem;}
-  footer{flex-direction:column;gap:0.5rem;text-align:center;padding:1.5rem;}
-  .about-inner{padding:4rem 1.5rem;}
+  .about-inner{padding:3.5rem 1.25rem;}
+
+  .urgency{padding:3.5rem 1.25rem;}
+  .urgency-main, .urgency-sub{font-size:clamp(1rem,4.5vw,1.05rem);}
+  .urgency-main{font-size:clamp(1.2rem,6vw,1.5rem);}
+  .urgency-inner .btn-gold{width:100%;text-align:center;}
+
+  .contact-inner{grid-template-columns:1fr;gap:2.5rem;padding:3rem 1.25rem;}
+
+  footer{flex-direction:column;gap:0.75rem;text-align:center;padding:1.5rem 1.25rem;justify-content:center;}
+  .footer-links{justify-content:center;flex-wrap:wrap;}
 }
+
+@media(max-width:420px){
+  .stats-inner{grid-template-columns:1fr 1fr;}
+  .about-results{grid-template-columns:1fr 1fr;}
+  .why-grid{grid-template-columns:1fr;}
+  .hero h1{font-size:2rem;}
+}
+
 </style>
 </head>
 <body>
- 
+
 <nav>
-  <div class="logo-text">Livara</div>
-  <ul>
+  <a href="#" class="logo-img"><img src="assets/logo.png" alt="Livara logo"></a>
+  <ul id="nav-menu">
     <li><a href="#results">Results</a></li>
     <li><a href="#services">Services</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#contact" class="nav-cta">Book a call</a></li>
   </ul>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
- 
+
 <div class="hero-wrap">
   <div class="hero">
-    <div class="hero-eyebrow">Customer Retention · CRM · Ecommerce Growth</div>
+    <div class="hero-eyebrow">Data · Website · Social</div>
     <h1>Turn your customer database into your <em>most profitable sales channel</em></h1>
-    <p class="hero-sub">CRM, retention and email strategy for independent boutiques and lifestyle brands. Increase repeat purchases, reactivate dormant customers and grow revenue without spending more on ads.</p>
+    <p class="hero-sub">Data-led growth for independent retailers. We use website insights, customer behaviour and social strategy to find revenue you already have and help you reach it.</p>
     <div class="hero-buttons">
-      <a href="#contact" class="btn-gold">Book a CRM Review</a>
+      <a href="#contact" class="btn-gold">Book a Growth Review</a>
     </div>
   </div>
- 
+
   <div class="stats-bar">
     <div class="stats-inner">
-      <div class="stat"><span class="stat-num">1,247</span><span class="stat-label">Customers Reactivated</span></div>
-      <div class="stat"><span class="stat-num">12→48%</span><span class="stat-label">Repeat Purchase Rate</span></div>
-      <div class="stat"><span class="stat-num">47%</span><span class="stat-label">Revenue From CRM</span></div>
-      <div class="stat"><span class="stat-num">+€70</span><span class="stat-label">AOV Increase</span></div>
+      <div class="stat"><span class="stat-num">12k</span><span class="stat-label">Email Audience Managed</span></div>
+      <div class="stat"><span class="stat-num">77%</span><span class="stat-label">Campaign Open Rate Achieved</span></div>
+      <div class="stat"><span class="stat-num">6,000+</span><span class="stat-label">Sign-Ups Generated</span></div>
+      <div class="stat"><span class="stat-num">13</span><span class="stat-label">First-Month Website Enquiries</span></div>
     </div>
   </div>
 </div>
- 
+
 <div class="platforms-wrap">
   <div class="platforms">
     <div class="platforms-label">We work with</div>
-    <div class="platform-list">
-      <span class="platform">Shopify</span>
-      <span class="platform">Klaviyo</span>
-      <span class="platform">Mailchimp</span>
-      <span class="platform">Omnisend</span>
-      <span class="platform">HubSpot</span>
-      <span class="platform">Salesforce</span>
-      <span class="platform">Instagram</span>
-      <span class="platform">TikTok</span>
+    <div class="logo-list">
+      <img src="assets/shopify.png" alt="Shopify">
+      <img src="assets/google-analytics.png" alt="Google Analytics">
+      <img src="assets/mailchimp.png" alt="Mailchimp">
+      <img src="assets/instagram.png" alt="Instagram">
+      <img src="assets/tiktok.png" alt="TikTok">
     </div>
   </div>
 </div>
- 
+
 <div class="light-section">
   <div class="section" id="results">
     <div class="section-tag">Case study</div>
     <h2>Real results for a <em>real retailer</em></h2>
-    <p class="section-sub">This is what retention-led growth looks like in practice.</p>
+    <p class="section-sub">This is what data-led growth looks like in practice.</p>
     <div class="case-study-block">
       <div class="cs-header">
         <div class="cs-tag">Case Study</div>
@@ -256,14 +320,14 @@ footer{background:var(--navy);padding:1.5rem 3rem;display:flex;align-items:cente
           </div>
           <div class="cs-item">
             <div class="cs-item-label">The approach</div>
-            <div class="cs-item-text">Customer segmentation, a dormant customer reactivation strategy and a full CRM programme across email and owned channels. No increase in ad spend required.</div>
+            <div class="cs-item-text">Customer segmentation, a dormant customer reactivation strategy and a full email programme across owned channels. No increase in ad spend required.</div>
           </div>
         </div>
         <div>
           <div class="cs-results">
             <div class="cs-result"><div class="cs-result-num">1,247</div><div class="cs-result-text">Dormant customers successfully reactivated</div></div>
             <div class="cs-result"><div class="cs-result-num">12→48%</div><div class="cs-result-text">Repeat purchase rate increase</div></div>
-            <div class="cs-result"><div class="cs-result-num">47%</div><div class="cs-result-text">Of monthly revenue generated through CRM campaigns</div></div>
+            <div class="cs-result"><div class="cs-result-num">47%</div><div class="cs-result-text">Of monthly revenue generated through email</div></div>
             <div class="cs-result"><div class="cs-result-num">+€70</div><div class="cs-result-text">Average order value uplift</div></div>
           </div>
         </div>
@@ -271,14 +335,14 @@ footer{background:var(--navy);padding:1.5rem 3rem;display:flex;align-items:cente
     </div>
   </div>
 </div>
- 
+
 <div style="background:var(--navy);padding:4.5rem 3rem;">
   <div style="max-width:960px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;" class="retention-inner">
     <div class="dark-h2">Most retailers are sitting on revenue they <em>do not know is there</em></div>
-    <p style="font-size:0.88rem;color:rgba(255,255,255,0.45);font-weight:300;line-height:1.85;">Your existing customers are your most profitable growth channel. They already know you, they have already bought from you, and they are significantly more likely to buy again. Yet most retailers spend the majority of their budget acquiring new customers while the revenue sitting inside their database goes untouched.<br><br>Livara identifies exactly where that revenue is and puts a strategy in place to get it back.</p>
+    <p style="font-size:0.88rem;color:rgba(255,255,255,0.45);font-weight:300;line-height:1.85;">Your existing customers, your website and your social channels already hold the answers. They already know you, they have already engaged with you, and they are significantly more likely to buy again. Yet most retailers spend the majority of their budget acquiring new customers while the opportunities already sitting inside their own data go untouched.<br><br>Livara identifies exactly where that revenue is and puts a strategy in place to get it back.</p>
   </div>
 </div>
- 
+
 <div class="light-section">
   <div class="section">
     <div class="section-tag">Why Livara</div>
@@ -286,15 +350,15 @@ footer{background:var(--navy);padding:1.5rem 3rem;display:flex;align-items:cente
     <p class="section-sub">Commercially focused recommendations built around the realities of independent retail.</p>
     <div class="why-grid">
       <div class="why-item"><div class="why-num">01</div><h3>Real retail experience</h3><p>We have worked inside boutique retail, not just consulted from the outside.</p></div>
-      <div class="why-item"><div class="why-num">02</div><h3>CRM led growth</h3><p>Every recommendation is grounded in customer data and purchase behaviour.</p></div>
-      <div class="why-item"><div class="why-num">03</div><h3>Shopify specialists</h3><p>Klaviyo, Omnisend, Mailchimp: we know the platforms independent retailers use.</p></div>
+      <div class="why-item"><div class="why-num">02</div><h3>Data led growth</h3><p>Every recommendation is grounded in real customer data and behaviour.</p></div>
+      <div class="why-item"><div class="why-num">03</div><h3>Website specialists</h3><p>Shopify, Google Analytics, Looker Studio: we know how to find what is working and what is not.</p></div>
       <div class="why-item"><div class="why-num">04</div><h3>Copywriting that converts</h3><p>We write emails and campaigns your customers actually want to open and act on.</p></div>
-      <div class="why-item"><div class="why-num">05</div><h3>Results focused</h3><p>We measure success by the revenue and retention improvements we deliver for your business.</p></div>
+      <div class="why-item"><div class="why-num">05</div><h3>Results focused</h3><p>We measure success by the revenue and growth improvements we deliver for your business.</p></div>
       <div class="why-item"><div class="why-num">06</div><h3>Long-term partnerships</h3><p>We invest in understanding your business so that our work compounds in value over time.</p></div>
     </div>
   </div>
 </div>
- 
+
 <div class="cream-section">
   <div class="section" id="how">
     <div class="section-tag">How it works</div>
@@ -302,28 +366,53 @@ footer{background:var(--navy);padding:1.5rem 3rem;display:flex;align-items:cente
     <p class="section-sub">No complicated onboarding. No long contracts. Just a clear path from where you are to where you want to be.</p>
     <div class="steps">
       <div class="step"><div class="step-num">01</div><div><h3>Discovery call</h3><p>A conversation about your business, your customers and where you feel growth is being left on the table.</p></div></div>
-      <div class="step"><div class="step-num">02</div><div><h3>Business review</h3><p>We audit your website, CRM, email setup and customer journey to identify specific, measurable opportunities.</p></div></div>
-      <div class="step"><div class="step-num">03</div><div><h3>Audit delivery</h3><p>A clear report with prioritised revenue opportunities. No vague recommendations, no padding.</p></div></div>
+      <div class="step"><div class="step-num">02</div><div><h3>Business review</h3><p>We audit your website, data setup and customer journey to identify specific, measurable opportunities.</p></div></div>
+      <div class="step"><div class="step-num">03</div><div><h3>Audit delivery</h3><p>A clear report with prioritised growth opportunities. No vague recommendations, no padding.</p></div></div>
       <div class="step"><div class="step-num">04</div><div><h3>Implementation</h3><p>We handle the execution, or hand everything over with full guidance. You choose what works for your business.</p></div></div>
     </div>
   </div>
 </div>
- 
+
 <div class="light-section" id="services">
   <div class="section">
     <div class="section-tag">Services</div>
-    <h2>Everything your customer journey <em>needs</em></h2>
-    <p class="section-sub">From the moment someone discovers your store to the moment they become a loyal returning buyer, we work across the full lifecycle.</p>
+    <h2>Everything your growth <em>needs</em></h2>
+    <p class="section-sub">From understanding your data to optimising your website and growing your audience, we work across the full picture.</p>
     <div class="svc-grid">
-      <div class="svc"><div class="svc-line"></div><h3>Email Marketing</h3><p>Campaigns, automations and flows that feel personal and drive real sales, not just open rates.</p></div>
-      <div class="svc"><div class="svc-line"></div><h3>Customer Reactivation</h3><p>Win back sequences built on actual purchase behaviour that bring lapsed customers back.</p></div>
-      <div class="svc"><div class="svc-line"></div><h3>Shopify Optimisation</h3><p>Post-purchase flows, checkout and product pages all working harder for your revenue.</p></div>
-      <div class="svc"><div class="svc-line"></div><h3>CRM Strategy</h3><p>We set up and manage your CRM tools so they consistently generate revenue, month after month.</p></div>
-      <div class="svc"><div class="svc-line"></div><h3>Social Media</h3><p>Content planning, campaign management and audience growth across Instagram, TikTok and beyond.</p></div>
+      <div class="svc-group">
+        <div class="svc-line"></div>
+        <h3>Data &amp; Insights</h3>
+        <ul>
+          <li>Website audits</li>
+          <li>Customer behaviour analysis</li>
+          <li>Google Analytics</li>
+          <li>Conversion improvements</li>
+        </ul>
+      </div>
+      <div class="svc-group">
+        <div class="svc-line"></div>
+        <h3>Website Optimisation</h3>
+        <ul>
+          <li>Homepage improvements</li>
+          <li>Product page optimisation</li>
+          <li>Customer journeys</li>
+          <li>Shopify optimisation</li>
+        </ul>
+      </div>
+      <div class="svc-group">
+        <div class="svc-line"></div>
+        <h3>Social Media</h3>
+        <ul>
+          <li>Content planning</li>
+          <li>Growth strategy</li>
+          <li>Campaign optimisation</li>
+          <li>Email marketing</li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
- 
+
 <div class="cream-section">
   <div class="section" id="pricing">
     <div class="section-tag">Ways to work together</div>
@@ -332,76 +421,78 @@ footer{background:var(--navy);padding:1.5rem 3rem;display:flex;align-items:cente
     <div class="ways-grid">
       <div class="way">
         <div class="way-tag">Starter</div>
-        <div class="way-name">CRM Audit</div>
-        <p class="way-desc">A thorough review of your customer journey, CRM and email setup. You receive a prioritised action plan with specific revenue opportunities identified.</p>
+        <div class="way-name">Growth Audit</div>
+        <p class="way-desc">A thorough review of your website, customer data and social channels. You receive a prioritised action plan with specific growth opportunities identified.</p>
         <ul class="way-list">
           <li><span class="ck">✓</span> Website &amp; Shopify review</li>
-          <li><span class="ck">✓</span> Email &amp; CRM health check</li>
+          <li><span class="ck">✓</span> Data &amp; analytics health check</li>
           <li><span class="ck">✓</span> Customer journey audit</li>
           <li><span class="ck">✓</span> Prioritised action plan</li>
           <li><span class="ck">✓</span> 30-minute debrief call</li>
         </ul>
-        <button class="way-cta" onclick="scrollContact('CRM Audit')">Enquire about this →</button>
+        <button class="way-cta" onclick="scrollContact('Growth Audit')">Enquire about this →</button>
       </div>
       <div class="way featured">
         <div class="way-tag">Most popular</div>
-        <div class="way-name">Retention Strategy</div>
-        <p class="way-desc">Ongoing retention and CRM management for retailers who want consistent, compounding results without handling the day-to-day themselves.</p>
+        <div class="way-name">Growth Partner</div>
+        <p class="way-desc">Ongoing data, website and social support for retailers who want consistent, compounding results without handling the day-to-day themselves.</p>
         <ul class="way-list">
           <li><span class="ck">✓</span> Monthly email campaigns</li>
           <li><span class="ck">✓</span> Customer reactivation sequences</li>
-          <li><span class="ck">✓</span> CRM management &amp; reporting</li>
-          <li><span class="ck">✓</span> Shopify optimisation</li>
-          <li><span class="ck">✓</span> Monthly performance review</li>
+          <li><span class="ck">✓</span> Reporting &amp; performance reviews</li>
+          <li><span class="ck">✓</span> Website optimisation</li>
+          <li><span class="ck">✓</span> Social content planning</li>
         </ul>
-        <button class="way-cta" onclick="scrollContact('Retention Strategy')">Enquire about this →</button>
+        <button class="way-cta" onclick="scrollContact('Growth Partner')">Enquire about this →</button>
       </div>
       <div class="way">
         <div class="way-tag">Full service</div>
-        <div class="way-name">Ongoing CRM Management</div>
-        <p class="way-desc">A comprehensive engagement covering strategy, execution and reporting across your full customer lifecycle. Built for retailers ready to scale.</p>
+        <div class="way-name">Full Growth Strategy</div>
+        <p class="way-desc">A comprehensive engagement covering strategy, execution and reporting across data, website and social. Built for retailers ready to scale.</p>
         <ul class="way-list">
-          <li><span class="ck">✓</span> Everything in Retention Strategy</li>
-          <li><span class="ck">✓</span> Full CRM strategy &amp; setup</li>
+          <li><span class="ck">✓</span> Everything in Growth Partner</li>
+          <li><span class="ck">✓</span> Full data &amp; tracking setup</li>
           <li><span class="ck">✓</span> Loyalty programme design</li>
           <li><span class="ck">✓</span> Customer segmentation</li>
           <li><span class="ck">✓</span> Quarterly business review</li>
         </ul>
-        <button class="way-cta" onclick="scrollContact('Ongoing CRM Management')">Enquire about this →</button>
+        <button class="way-cta" onclick="scrollContact('Full Growth Strategy')">Enquire about this →</button>
       </div>
     </div>
   </div>
 </div>
- 
+
 <div class="urgency">
   <div class="urgency-inner">
-    <p class="urgency-main">Your existing customers are your most profitable growth channel. We will help you reach them.</p>
-    <p class="urgency-sub">Most retailers are already sitting on thousands of euro in untapped revenue inside their customer database. Let us show you exactly where it is and put a strategy in place to get it back.</p>
-    <a href="#contact" class="btn-gold">Book my CRM review</a>
+    <p class="urgency-main">Your data, your website and your audience already hold the answers. We will help you find them.</p>
+    <p class="urgency-sub">Most retailers are already sitting on growth they cannot see. Let us show you exactly where it is and put a strategy in place to reach it.</p>
+    <a href="#contact" class="btn-gold">Book my Growth Review</a>
   </div>
 </div>
- 
+
 <div class="about-block" id="about">
   <div class="about-inner">
     <div class="section-tag">About</div>
     <h2>Built by someone who <em>understands retail</em></h2>
     <div class="about-body">
-      <p>Livara was built after working directly inside retail and ecommerce businesses and seeing the same problem repeat itself. Retailers investing heavily in acquiring new customers while the revenue sitting inside their existing database goes untouched.</p>
-      <p>We have managed email campaigns to audiences of 12,000 subscribers and achieved open rates of 77%. We have run campaigns that generated 6,000 sign-ups in under two weeks. We have grown social audiences by 200% and increased engagement by 28%. We have redesigned websites that took monthly conversions from 2,000 to 5,000, and built new sites that generated 13 enquiries in their first month.</p>
-      <p>Independent retailers deserve the same standard of retention strategy as the big brands. That is what Livara is here to deliver.</p>
+      <p>Independent retailers do not need more marketing. They need clarity.</p>
+      <p>Livara was created after seeing the same problem repeatedly inside growing retail businesses. Retailers investing time and money into attracting new customers while missing opportunities already sitting inside their website, customer data and social channels.</p>
+      <p>We use data, customer behaviour and website insights to identify what is working, what is being missed and where the biggest opportunities for growth exist.</p>
+      <p>From improving website layouts to analysing customer journeys and creating social strategies that convert, every recommendation is built around measurable results.</p>
     </div>
     <div class="about-results">
-      <div class="ar-item"><span class="ar-num">77%</span><span class="ar-label">Email open rate across 12,000 subscribers</span></div>
-      <div class="ar-item"><span class="ar-num">6,000+</span><span class="ar-label">Sign-ups generated in under two weeks</span></div>
-      <div class="ar-item"><span class="ar-num">200%</span><span class="ar-label">Social audience growth</span></div>
-      <div class="ar-item"><span class="ar-num">28%</span><span class="ar-label">Engagement increase</span></div>
-      <div class="ar-item"><span class="ar-num">2k→5k</span><span class="ar-label">Monthly conversions after website redesign</span></div>
-      <div class="ar-item"><span class="ar-num">13</span><span class="ar-label">Enquiries in the first month from a new website</span></div>
+      <div class="ar-item"><span class="ar-num">77%</span><span class="ar-label">Email open rate achieved</span></div>
+      <div class="ar-item"><span class="ar-num">6,000+</span><span class="ar-label">Sign-ups generated</span></div>
+      <div class="ar-item"><span class="ar-num">200%</span><span class="ar-label">Social growth</span></div>
+      <div class="ar-item"><span class="ar-num">13</span><span class="ar-label">Enquiries in first month</span></div>
     </div>
-    <div class="signoff">Love, Liv</div>
+    <div class="signoff">
+      <div class="signoff-name">Liv Roche</div>
+      <div class="signoff-title">Founder, Livara</div>
+    </div>
   </div>
 </div>
- 
+
 <div class="contact-wrap" id="contact">
   <div class="contact-inner">
     <div class="contact-left">
@@ -411,8 +502,7 @@ footer{background:var(--navy);padding:1.5rem 3rem;display:flex;align-items:cente
       <div class="c-detail">
         <div class="c-row"><div class="c-label">Email</div><div class="c-val"><a href="mailto:liv@livara.ie">liv@livara.ie</a></div></div>
         <div class="c-row"><div class="c-label">Focus</div><div class="c-val">Independent retail &amp; lifestyle brands</div></div>
-        <div class="c-row"><div class="c-label"></div></div>
-                                                                                                                               
+        <div class="c-row"><div class="c-label"></div><div class="c-val"></div></div>
       </div>
     </div>
     <div>
@@ -426,9 +516,9 @@ footer{background:var(--navy);padding:1.5rem 3rem;display:flex;align-items:cente
           <label class="fl" for="fsel">Service interested in</label>
           <select id="fsel" name="service" onchange="this.classList.add('sel');updSubj()">
             <option value="" disabled selected>Select a service</option>
-            <option>CRM Audit</option>
-            <option>Retention Strategy</option>
-            <option>Ongoing CRM Management</option>
+            <option>Growth Audit</option>
+            <option>Growth Partner</option>
+            <option>Full Growth Strategy</option>
             <option>Not sure yet</option>
           </select>
         </div>
@@ -439,12 +529,17 @@ footer{background:var(--navy);padding:1.5rem 3rem;display:flex;align-items:cente
     </div>
   </div>
 </div>
- 
+
 <footer>
   <div class="footer-logo">Livara</div>
-  <div class="footer-copy">© 2026 Livara · Customer Retention · CRM · Ecommerce Growth</div>
+  <div class="footer-links">
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="cookies.html">Cookie Policy</a>
+    <a href="terms.html">Terms &amp; Conditions</a>
+  </div>
+  <div class="footer-copy">© 2026 Livara · Data · Website · Social</div>
 </footer>
- 
+
 <script>
 function updSubj(){var v=document.getElementById('fsel').value;if(v)document.getElementById('subj').value='New Livara enquiry: '+v;}
 function scrollContact(s){
@@ -460,6 +555,21 @@ function handleSubmit(e){
     else{alert('Something went wrong. Please email liv@livara.ie directly.');}
   }).catch(function(){alert('Something went wrong. Please email liv@livara.ie directly.');});
 }
+
+var navToggle=document.getElementById('nav-toggle');
+var navMenu=document.getElementById('nav-menu');
+navToggle.addEventListener('click',function(){
+  var isOpen=navMenu.classList.toggle('open');
+  navToggle.classList.toggle('open');
+  navToggle.setAttribute('aria-expanded',isOpen?'true':'false');
+});
+navMenu.querySelectorAll('a').forEach(function(link){
+  link.addEventListener('click',function(){
+    navMenu.classList.remove('open');
+    navToggle.classList.remove('open');
+    navToggle.setAttribute('aria-expanded','false');
+  });
+});
 </script>
 </body>
 </html>
