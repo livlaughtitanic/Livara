@@ -1,100 +1,557 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-<meta charset="UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Read how Livara collects, uses, stores and protects personal information when you visit the website or contact us.">
+  <meta name="theme-color" content="#f6f4ee">
+  <title>Privacy Policy | Livara</title>
 
-<!-- CookieYes consent banner — must load first to gate GA4 -->
-<script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/30f88639b34e892b16e2628e/script.js"></script>
+  <!-- Google Analytics: one copy of the existing tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8KQGB4HE1S"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){window.dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-8KQGB4HE1S');
+  </script>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KQGB4HE1S"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-8KQGB4HE1S');
-</script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy · Livara</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-:root{--cream:#F5F2EC;--white:#FDFAF5;--navy:#141C2B;--sage:#8A9A82;--sage-dark:#5A6E54;--gold:#C9A96E;--muted:#6B6A66;--border:rgba(26,34,53,0.1);--border-white:rgba(255,255,255,0.08);}
-html{scroll-behavior:smooth;}
-body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--navy);line-height:1.7;font-size:16px;}
-nav{background:var(--navy);border-bottom:1px solid var(--border-white);padding:1.25rem 3rem;display:flex;align-items:center;justify-content:space-between;}
-.logo-text{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:500;color:white;letter-spacing:0.14em;text-transform:uppercase;text-decoration:none;}
-nav a.back{color:rgba(255,255,255,0.45);font-size:0.78rem;text-decoration:none;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s;}
-nav a.back:hover{color:white;}
-.page{max-width:700px;margin:0 auto;padding:5rem 2rem 6rem;}
-.section-tag{font-size:0.62rem;font-weight:400;text-transform:uppercase;letter-spacing:0.16em;color:var(--sage);margin-bottom:1rem;display:flex;align-items:center;gap:0.6rem;}
-.section-tag::before{content:'';display:block;width:16px;height:1px;background:var(--sage);}
-h1{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.4rem);font-weight:500;color:var(--navy);line-height:1.12;margin-bottom:1.5rem;}
-h1 em{font-style:italic;color:var(--sage-dark);}
-h2{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:500;color:var(--navy);margin:2rem 0 0.75rem;}
-p{font-size:0.9rem;color:var(--muted);font-weight:300;margin-bottom:1rem;}
-ul{margin:0 0 1rem 1.25rem;}
-li{font-size:0.9rem;color:var(--muted);font-weight:300;margin-bottom:0.5rem;}
-.updated{font-size:0.78rem;color:var(--muted);font-weight:300;margin-bottom:2.5rem;}
-a{color:var(--navy);text-decoration:none;border-bottom:1px solid var(--border);}
-a:hover{border-color:var(--navy);}
-footer{background:var(--navy);padding:1.5rem 3rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
-.footer-logo{font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:rgba(255,255,255,0.3);letter-spacing:0.14em;text-transform:uppercase;}
-.footer-links{display:flex;gap:1.5rem;flex-wrap:wrap;}
-.footer-links a{font-size:0.68rem;color:rgba(255,255,255,0.3);text-decoration:none;letter-spacing:0.04em;border-bottom:none;transition:color 0.2s;}
-.footer-links a:hover{color:rgba(255,255,255,0.6);border-bottom:none;}
-.footer-copy{font-size:0.68rem;color:rgba(255,255,255,0.2);font-weight:300;letter-spacing:0.04em;}
-@media(max-width:600px){
-  nav{padding:1.1rem 1.5rem;}
-  .page{padding:3rem 1.5rem 4rem;}
-  footer{flex-direction:column;text-align:center;justify-content:center;padding:1.5rem;}
-  .footer-links{justify-content:center;}
-}
-</style>
-</head>
+  <!-- Ketch consent banner -->
+  <script>
+    (function () {
+      window.semaphore = window.semaphore || [];
+      window.ketch = function () { window.semaphore.push(arguments); };
+      var script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = 'https://global.ketchcdn.com/web/v3/config/livara/website_smart_tag/boot.js';
+      script.defer = true;
+      script.async = true;
+      document.head.appendChild(script);
+    }());
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Livara",
+    "url": "https://livara.ie",
+    "description": "Website, customer data and digital performance support for independent retailers in Ireland.",
+    "founder": "Liv Roche",
+    "areaServed": "Ireland",
+    "email": "liv@livara.ie"
+  }
+  </script>
+
+  <script>
+    (function () {
+      try {
+        var savedTheme = localStorage.getItem('livara-theme');
+        if (savedTheme === 'light' || savedTheme === 'dark') {
+          document.documentElement.setAttribute('data-theme', savedTheme);
+        }
+      } catch (error) {
+        // The site still works if browser storage is unavailable.
+      }
+    }());
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      color-scheme: light;
+      --page: #f6f4ee;
+      --surface: #fffefa;
+      --surface-soft: #eeece4;
+      --ink: #252923;
+      --muted: #686c63;
+      --line: #dcded5;
+      --accent: #596b50;
+      --accent-hover: #43543b;
+      --accent-ink: #ffffff;
+      --hero: #263128;
+      --hero-ink: #f7f5ee;
+      --hero-muted: #c6ccc1;
+      --highlight: #d6c18f;
+      --shadow: 0 12px 36px rgba(28, 34, 27, 0.06);
+    }
+
+    html[data-theme="dark"] {
+      color-scheme: dark;
+      --page: #191c19;
+      --surface: #222621;
+      --surface-soft: #292e28;
+      --ink: #f0efe7;
+      --muted: #b5baaf;
+      --line: #3b4239;
+      --accent: #b4c3a7;
+      --accent-hover: #d0dbc6;
+      --accent-ink: #20251e;
+      --hero: #111611;
+      --hero-ink: #f7f5ee;
+      --hero-muted: #c1c8bc;
+      --highlight: #d6c18f;
+      --shadow: 0 12px 36px rgba(0, 0, 0, 0.16);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      transition: background-color 180ms ease, color 180ms ease;
+    }
+    a { color: inherit; }
+    img { max-width: 100%; }
+    button, input, textarea, select { font: inherit; }
+    a:focus-visible, button:focus-visible { outline: 3px solid var(--highlight); outline-offset: 4px; }
+    .skip-link {
+      position: absolute; left: -9999px; top: 0; z-index: 1000;
+      background: var(--surface); color: var(--ink); padding: .75rem 1rem;
+    }
+    .skip-link:focus { left: 1rem; top: 1rem; }
+    .site-header {
+      position: relative; z-index: 10;
+      background: var(--surface);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-wrap {
+      width: min(1120px, calc(100% - 48px)); min-height: 78px;
+      margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 28px;
+    }
+    .wordmark {
+      font-family: 'Playfair Display', serif; font-size: 1.55rem; font-weight: 500;
+      letter-spacing: .04em; text-decoration: none; white-space: nowrap;
+    }
+    .nav-right { display: flex; align-items: center; gap: 28px; }
+    .main-nav { display: flex; align-items: center; gap: 27px; }
+    .main-nav a {
+      color: var(--muted); text-decoration: none; font-size: .83rem;
+      transition: color 160ms ease;
+    }
+    .main-nav a:hover, .main-nav a[aria-current="page"] { color: var(--ink); }
+    .main-nav .nav-contact { color: var(--ink); border-bottom: 1px solid var(--accent); padding-bottom: 4px; }
+    .theme-toggle, .menu-toggle {
+      border: 1px solid var(--line); color: var(--ink); background: transparent;
+      cursor: pointer; min-height: 40px; padding: 8px 12px; border-radius: 2px;
+    }
+    .theme-toggle { display: inline-flex; align-items: center; gap: 8px; font-size: .78rem; }
+    .theme-toggle .theme-symbol { font-size: 1rem; line-height: 1; }
+    .menu-toggle { display: none; }
+
+    .hero { background: var(--hero); color: var(--hero-ink); }
+    .hero-inner {
+      width: min(1120px, calc(100% - 48px)); margin: 0 auto;
+      min-height: 490px; padding: 92px 0 0; display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(250px, .75fr); gap: 70px; align-items: center;
+    }
+    .eyebrow {
+      margin: 0 0 22px; color: var(--highlight); font-size: .73rem;
+      letter-spacing: .13em; text-transform: uppercase;
+    }
+    h1, h2, h3, p { margin-top: 0; }
+    h1, h2, .feature-number, .result-number { font-family: 'Playfair Display', Georgia, serif; font-weight: 400; }
+    h1 { max-width: 690px; margin-bottom: 23px; font-size: clamp(2.8rem, 5vw, 4.7rem); line-height: 1.08; letter-spacing: -.035em; }
+    h1 em, h2 em { color: var(--highlight); font-weight: 400; }
+    .hero-copy { max-width: 570px; color: var(--hero-muted); font-size: 1rem; line-height: 1.85; margin-bottom: 30px; }
+    .hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 22px; }
+    .button {
+      display: inline-flex; justify-content: center; align-items: center; gap: 12px;
+      min-height: 48px; padding: 12px 19px; text-decoration: none; border: 1px solid transparent;
+      font-size: .82rem; font-weight: 600; transition: background 160ms ease, color 160ms ease, border-color 160ms ease;
+    }
+    .button-primary { background: var(--highlight); color: #24291f; }
+    .button-primary:hover { background: #e3d2a8; }
+    .text-link { color: var(--hero-ink); text-decoration: none; border-bottom: 1px solid rgba(255,255,255,.4); padding-bottom: 4px; font-size: .84rem; }
+    .text-link:hover { border-color: var(--highlight); }
+
+    .hero-note { padding: 29px 0 29px 28px; border-left: 1px solid rgba(255,255,255,.22); }
+    .hero-note-label { color: var(--hero-muted); font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 18px; }
+    .hero-note p { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1.45rem, 2.5vw, 2rem); line-height: 1.4; margin-bottom: 22px; }
+    .hero-note small { color: var(--hero-muted); font-size: .78rem; }
+    .hero-bottom { height: 56px; border-top: 1px solid rgba(255,255,255,.13); margin-top: 72px; }
+    .hero-bottom-inner { width: min(1120px, calc(100% - 48px)); height: 100%; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .hero-bottom span { color: var(--hero-muted); font-size: .73rem; }
+
+    .section { width: min(1120px, calc(100% - 48px)); margin: 0 auto; padding: 88px 0; }
+    .section-heading { max-width: 660px; margin-bottom: 42px; }
+    .section-label { margin-bottom: 12px; color: var(--accent); font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; }
+    h2 { font-size: clamp(2rem, 3.4vw, 3rem); line-height: 1.17; letter-spacing: -.025em; margin-bottom: 17px; }
+    h2 em { color: var(--accent); }
+    .section-intro { max-width: 590px; color: var(--muted); margin-bottom: 0; line-height: 1.85; }
+    .results { background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .results-grid { display: grid; grid-template-columns: repeat(4, 1fr); border-left: 1px solid var(--line); }
+    .result { min-height: 140px; padding: 24px 23px; border-right: 1px solid var(--line); }
+    .result-number { display: block; color: var(--accent); font-size: 2.25rem; line-height: 1.2; margin-bottom: 9px; }
+    .result-label { color: var(--muted); font-size: .78rem; line-height: 1.5; }
+    .result-note { color: var(--muted); font-size: .72rem; margin-top: 18px; }
+
+    .work-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); }
+    .work-item { padding: 27px 27px 5px 0; margin-right: 27px; }
+    .work-item + .work-item { border-left: 1px solid var(--line); padding-left: 27px; }
+    .work-index { color: var(--accent); font-size: .75rem; margin-bottom: 28px; }
+    .work-item h3 { font-family: 'Playfair Display', Georgia, serif; font-size: 1.45rem; font-weight: 400; margin-bottom: 12px; }
+    .work-item p { color: var(--muted); font-size: .87rem; line-height: 1.8; margin-bottom: 20px; }
+    .small-link { color: var(--accent); font-size: .82rem; text-decoration: none; border-bottom: 1px solid var(--line); padding-bottom: 4px; }
+    .small-link:hover { border-color: var(--accent); }
+
+    .case-study { background: var(--surface-soft); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .case-layout { display: grid; grid-template-columns: .9fr 1.1fr; gap: 75px; align-items: start; }
+    .case-title { font-size: clamp(1.9rem, 3vw, 2.8rem); }
+    .case-copy { color: var(--muted); font-size: .9rem; line-height: 1.85; }
+    .case-copy p:last-child { margin-bottom: 0; }
+    .case-results { border-top: 1px solid var(--line); }
+    .case-result { display: grid; grid-template-columns: 125px 1fr; gap: 18px; padding: 18px 0; border-bottom: 1px solid var(--line); align-items: center; }
+    .case-result strong { font-family: 'Playfair Display', Georgia, serif; font-weight: 400; color: var(--accent); font-size: 1.65rem; }
+    .case-result span { color: var(--muted); font-size: .83rem; }
+    .case-disclaimer { margin-top: 18px; color: var(--muted); font-size: .72rem; }
+
+    .closing { background: var(--hero); color: var(--hero-ink); }
+    .closing-inner { display: flex; align-items: center; justify-content: space-between; gap: 45px; }
+    .closing h2 { max-width: 660px; margin-bottom: 12px; }
+    .closing p { max-width: 600px; color: var(--hero-muted); margin-bottom: 0; font-size: .9rem; }
+    .closing .button { flex-shrink: 0; }
+
+    .site-footer { background: var(--surface); border-top: 1px solid var(--line); }
+    .footer-main { width: min(1120px, calc(100% - 48px)); margin: 0 auto; padding: 34px 0; display: grid; grid-template-columns: 1fr 2fr 1fr; gap: 25px; align-items: center; }
+    .footer-brand { font-family: 'Playfair Display', Georgia, serif; font-size: 1.3rem; text-decoration: none; }
+    .footer-note { color: var(--muted); font-size: .75rem; }
+    .footer-links { display: flex; justify-content: center; gap: 22px; flex-wrap: wrap; }
+    .footer-links a { color: var(--muted); text-decoration: none; font-size: .75rem; }
+    .footer-links a:hover { color: var(--ink); }
+    .footer-bottom { border-top: 1px solid var(--line); }
+    .footer-bottom-inner { width: min(1120px, calc(100% - 48px)); margin: 0 auto; padding: 14px 0; display: flex; justify-content: space-between; gap: 15px; color: var(--muted); font-size: .7rem; }
+
+    @media (max-width: 850px) {
+      .nav-wrap { min-height: 70px; }
+      .nav-right { gap: 12px; }
+      .main-nav { gap: 16px; }
+      .hero-inner { grid-template-columns: 1fr; gap: 38px; padding-top: 68px; }
+      .hero-note { max-width: 560px; }
+      .hero-bottom { margin-top: 48px; }
+      .case-layout { gap: 40px; }
+      .footer-main { grid-template-columns: 1fr 2fr; }
+      .footer-note { grid-column: 1 / -1; grid-row: 2; }
+    }
+    @media (max-width: 640px) {
+      .nav-wrap, .hero-inner, .hero-bottom-inner, .section, .footer-main, .footer-bottom-inner { width: min(100% - 36px, 1120px); }
+      .nav-wrap { position: relative; }
+      .menu-toggle { display: inline-flex; align-items: center; justify-content: center; }
+      .nav-right { gap: 8px; }
+      .main-nav {
+        display: none; position: absolute; top: calc(100% - 1px); left: -18px; right: -18px;
+        padding: 12px 18px 20px; background: var(--surface); border-bottom: 1px solid var(--line);
+        align-items: stretch; gap: 0; flex-direction: column;
+      }
+      .main-nav.is-open { display: flex; }
+      .main-nav a { padding: 12px 0; border-bottom: 1px solid var(--line); }
+      .main-nav .nav-contact { border-bottom: none; }
+      .theme-toggle { min-width: 42px; justify-content: center; padding: 8px 10px; }
+      .theme-toggle .theme-label { display: none; }
+      h1 { font-size: clamp(2.55rem, 11vw, 3.6rem); }
+      .hero-inner { padding-top: 55px; }
+      .hero-note { padding-left: 18px; }
+      .hero-bottom { margin-top: 38px; }
+      .hero-bottom-inner { align-items: flex-start; justify-content: center; flex-direction: column; gap: 0; padding: 9px 0; }
+      .hero-bottom span { font-size: .68rem; }
+      .section { padding: 62px 0; }
+      .results-grid { grid-template-columns: 1fr 1fr; }
+      .result { min-height: 120px; padding: 20px 15px; border-bottom: 1px solid var(--line); }
+      .result-number { font-size: 1.9rem; }
+      .work-grid { grid-template-columns: 1fr; }
+      .work-item, .work-item + .work-item { margin: 0; padding: 23px 0; border-left: 0; border-bottom: 1px solid var(--line); }
+      .work-index { margin-bottom: 13px; }
+      .case-layout { grid-template-columns: 1fr; gap: 32px; }
+      .case-result { grid-template-columns: 105px 1fr; gap: 12px; }
+      .case-result strong { font-size: 1.45rem; }
+      .closing-inner { align-items: flex-start; flex-direction: column; gap: 25px; }
+      .footer-main { grid-template-columns: 1fr; gap: 13px; }
+      .footer-note { grid-column: auto; grid-row: auto; }
+      .footer-links { justify-content: flex-start; gap: 14px 20px; }
+      .footer-bottom-inner { flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+    }
+
+    .contact-hero { background: var(--hero); color: var(--hero-ink); }
+    .contact-hero-inner { width: min(1120px, calc(100% - 48px)); margin: 0 auto; padding: 92px 0 82px; }
+    .contact-hero h1 { max-width: 780px; margin-bottom: 22px; }
+    .contact-hero h1 em { color: var(--highlight); }
+    .contact-hero-copy { max-width: 650px; color: var(--hero-muted); font-size: 1rem; line-height: 1.85; margin-bottom: 0; }
+    .contact-main { background: var(--page); }
+    .contact-layout { display: grid; grid-template-columns: .82fr 1.18fr; gap: 76px; align-items: start; }
+    .contact-aside { position: sticky; top: 30px; }
+    .contact-aside h2 { max-width: 430px; }
+    .contact-aside > p:not(.section-label) { color: var(--muted); max-width: 420px; line-height: 1.85; }
+    .contact-details { margin-top: 38px; border-top: 1px solid var(--line); }
+    .contact-detail { padding: 18px 0; border-bottom: 1px solid var(--line); }
+    .contact-detail-label { display: block; color: var(--muted); font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 5px; }
+    .contact-detail a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--accent); padding-bottom: 3px; }
+    .contact-detail p { margin: 0; color: var(--ink); font-size: .9rem; }
+    .contact-form-card { background: var(--surface); border: 1px solid var(--line); padding: clamp(24px, 4vw, 42px); box-shadow: var(--shadow); }
+    .contact-form-card h2 { font-size: clamp(1.7rem, 3vw, 2.25rem); margin-bottom: 8px; }
+    .form-intro { color: var(--muted); font-size: .85rem; margin-bottom: 28px; }
+    .contact-form { display: grid; gap: 19px; }
+    .form-field { display: grid; gap: 7px; }
+    .form-field label { color: var(--ink); font-size: .78rem; font-weight: 600; }
+    .form-field input, .form-field select, .form-field textarea { width: 100%; border: 1px solid var(--line); border-radius: 2px; background: var(--page); color: var(--ink); padding: 13px 14px; font-size: .86rem; outline: none; transition: border-color 160ms ease, box-shadow 160ms ease; }
+    .form-field input::placeholder, .form-field textarea::placeholder { color: var(--muted); opacity: .8; }
+    .form-field input:focus, .form-field select:focus, .form-field textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 14%, transparent); }
+    .form-field textarea { min-height: 145px; resize: vertical; }
+    .form-submit { justify-self: start; min-height: 48px; padding: 12px 22px; border: 0; border-radius: 2px; background: var(--hero); color: var(--hero-ink); cursor: pointer; font-size: .83rem; font-weight: 600; transition: background 160ms ease, transform 160ms ease; }
+    .form-submit:hover { background: var(--accent); transform: translateY(-1px); }
+    .form-smallprint { color: var(--muted); font-size: .72rem; margin: -5px 0 0; }
+    .form-ok { display: none; padding: 24px; background: var(--surface-soft); border: 1px solid var(--line); color: var(--ink); }
+    .form-ok p { margin: 0; }
+    .form-error { display: none; color: #a13b32; font-size: .82rem; margin: 0; }
+    .next-steps { background: var(--surface-soft); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; border-top: 1px solid var(--line); }
+    .step { padding-top: 23px; }
+    .step-number { display: block; color: var(--accent); font-family: 'Playfair Display', Georgia, serif; font-size: 1.7rem; margin-bottom: 13px; }
+    .step h3 { font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-size: 1.25rem; margin-bottom: 8px; }
+    .step p { color: var(--muted); font-size: .84rem; line-height: 1.8; margin-bottom: 0; }
+    .contact-reassurance { max-width: 690px; }
+    .contact-reassurance p:last-child { color: var(--muted); line-height: 1.85; margin-bottom: 0; }
+    @media (max-width: 850px) {
+      .contact-layout { grid-template-columns: 1fr; gap: 42px; }
+      .contact-aside { position: static; }
+      .contact-details { margin-top: 25px; }
+    }
+    @media (max-width: 640px) {
+      .contact-hero-inner { width: min(100% - 36px, 1120px); padding: 65px 0 58px; }
+      .steps-grid { grid-template-columns: 1fr; gap: 24px; }
+      .step { padding-top: 18px; }
+      .contact-form-card { padding: 23px 19px; }
+      .form-submit { width: 100%; }
+    }
+
+    .policy-hero { background: var(--hero); color: var(--hero-ink); }
+    .policy-hero-inner { width: min(900px, calc(100% - 48px)); margin: 0 auto; padding: 82px 0 76px; }
+    .policy-hero h1 { max-width: 760px; margin-bottom: 18px; }
+    .policy-hero-copy { max-width: 680px; color: var(--hero-muted); margin: 0; }
+    .policy-meta { margin-top: 24px; color: var(--hero-muted); font-size: .78rem; }
+    .policy-wrap { width: min(900px, calc(100% - 48px)); margin: 0 auto; padding: 70px 0 90px; }
+    .policy-intro { max-width: 760px; margin-bottom: 42px; font-size: 1.03rem; color: var(--muted); }
+    .policy-section { padding: 29px 0; border-top: 1px solid var(--line); }
+    .policy-section h2 { margin-bottom: 13px; font-size: clamp(1.45rem, 2.5vw, 1.9rem); }
+    .policy-section h3 { margin: 23px 0 8px; font-size: 1rem; font-weight: 600; }
+    .policy-section p, .policy-section li { color: var(--muted); }
+    .policy-section ul { padding-left: 22px; margin: 12px 0 0; }
+    .policy-section li { padding-left: 4px; margin: 7px 0; }
+    .policy-section a { color: var(--ink); text-decoration-color: var(--accent); text-underline-offset: 3px; }
+    .policy-note { margin-top: 22px; padding: 18px 20px; background: var(--surface-soft); border-left: 2px solid var(--accent); color: var(--muted); font-size: .9rem; }
+    .policy-contact { margin-top: 36px; padding: 27px; background: var(--surface); border: 1px solid var(--line); }
+    .policy-contact h2 { margin-bottom: 8px; }
+    .policy-contact a { color: var(--ink); }
+    @media (max-width: 640px) {
+      .policy-hero-inner { width: min(100% - 36px, 900px); padding: 62px 0 56px; }
+      .policy-wrap { width: min(100% - 36px, 900px); padding: 48px 0 64px; }
+      .policy-contact { padding: 21px; }
+    }
+  </style>
+
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="wordmark" href="index.html" aria-label="Livara home">livara</a>
+      <div class="nav-right">
+        <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Contact</a>
+          <a href="privacy.html" class="nav-contact" aria-current="page">Privacy</a>
+        </nav>
+        <button class="theme-toggle" id="theme-toggle" type="button"><span class="theme-symbol" aria-hidden="true">☾</span><span class="theme-label">Dark mode</span></button>
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation">Menu</button>
+      </div>
+    </div>
+  </header>
 
-<nav>
-  <a href="index.html" class="logo-text">Livara</a>
-  <a href="index.html" class="back">Back to site</a>
-</nav>
+  <main id="main">
+    <section class="policy-hero">
+      <div class="policy-hero-inner">
+        <p class="eyebrow">LEGAL &amp; PRIVACY</p>
+        <h1>Your privacy <em>matters.</em></h1>
+        <p class="policy-hero-copy">This policy explains what information Livara collects, why it is used and the choices you have when you visit this website or get in touch.</p>
+        <p class="policy-meta">Last updated: 16 November 2026</p>
+      </div>
+    </section>
 
-<div class="page">
-  <div class="section-tag">Legal</div>
-  <h1>Privacy <em>Policy</em></h1>
-  <p class="updated">Last updated: June 2026</p>
+    <article class="policy-wrap">
+      <p class="policy-intro">Livara is committed to handling personal information responsibly and being clear about how it is used. This policy applies to visitors to <a href="https://livara.ie">livara.ie</a> and people who contact Livara about its services.</p>
 
-  <p>This Privacy Policy explains how Livara ("we", "us", "our") collects, uses and protects information when you visit our website or contact us about our services.</p>
+      <section class="policy-section" aria-labelledby="who-we-are">
+        <h2 id="who-we-are">Who we are</h2>
+        <p>For the purposes of data protection law, Livara, operated by Liv Roche in Ireland, is the data controller for the personal information described in this policy. This means Livara decides why and how that information is used.</p>
+        <p>You can contact Livara about this policy or your personal information at <a href="mailto:liv@livara.ie">liv@livara.ie</a>.</p>
+      </section>
 
-  <h2>Information we collect</h2>
-  <p>When you fill out our contact form, we collect the information you provide, which may include your name, email address, business name, website and any details you share about your business.</p>
+      <section class="policy-section" aria-labelledby="information-we-collect">
+        <h2 id="information-we-collect">Information we collect</h2>
+        <h3>Information you provide</h3>
+        <p>When you submit the contact form or email Livara, you may provide:</p>
+        <ul>
+          <li>Your name and email address.</li>
+          <li>Your business name and website address.</li>
+          <li>The service you are interested in.</li>
+          <li>The details and any other information you choose to include in your message.</li>
+        </ul>
+        <h3>Information collected when you visit the website</h3>
+        <p>Depending on your cookie and tracking choices, technical and usage information may be collected when you browse the website. This may include your device and browser information, approximate location derived from your IP address, pages viewed, interactions, referral source and online identifiers such as cookie IDs.</p>
+      </section>
 
-  <h2>How we use your information</h2>
-  <ul>
-    <li>To respond to your enquiry and discuss our services</li>
-    <li>To provide proposals, audits or reports you have requested</li>
-    <li>To maintain records of our communications with you</li>
-  </ul>
+      <section class="policy-section" aria-labelledby="how-we-use">
+        <h2 id="how-we-use">How we use your information</h2>
+        <p>Livara uses personal information where it is necessary to:</p>
+        <ul>
+          <li>Respond to enquiries and communicate with you.</li>
+          <li>Discuss, prepare and provide proposals or services you request.</li>
+          <li>Deliver agreed work and maintain relevant business records.</li>
+          <li>Understand how visitors use the website and improve its content and performance, where the required consent has been given.</li>
+          <li>Maintain website security, prevent misuse and troubleshoot technical issues.</li>
+          <li>Meet applicable legal, accounting and regulatory obligations.</li>
+        </ul>
+      </section>
 
-  <h2>How we store your information</h2>
-  <p>Enquiries submitted through our contact form are processed using Formspree. We do not sell, rent or share your personal information with third parties for marketing purposes.</p>
+      <section class="policy-section" aria-labelledby="lawful-basis">
+        <h2 id="lawful-basis">Why we are allowed to use your information</h2>
+        <p>Data protection law requires a lawful basis for using personal information. Depending on the circumstances, Livara relies on:</p>
+        <ul>
+          <li><strong>Steps before entering a contract or performing a contract:</strong> to respond when you ask about services, prepare a proposal or provide work you have agreed to.</li>
+          <li><strong>Legitimate interests:</strong> to manage business correspondence, maintain appropriate records, protect and secure the website and operate the business, where those interests are not overridden by your rights.</li>
+          <li><strong>Legal obligation:</strong> where information must be retained or provided to comply with applicable law.</li>
+          <li><strong>Consent:</strong> for non-essential cookies and similar tracking technologies, including analytics where consent is required. You can change or withdraw your consent using the website's cookie settings.</li>
+        </ul>
+      </section>
 
-  <h2>Your rights</h2>
-  <p>You can ask us to access, correct or delete any personal information we hold about you at any time by emailing <a href="mailto:liv@livara.ie">liv@livara.ie</a>.</p>
+      <section class="policy-section" aria-labelledby="service-providers">
+        <h2 id="service-providers">Who processes information on our behalf</h2>
+        <p>Livara uses a small number of service providers to operate the website and communicate with you. Depending on the service involved, these may include:</p>
+        <ul>
+          <li><strong>Formspree:</strong> processes information submitted through the website contact form and passes the enquiry to Livara.</li>
+          <li><strong>Google Workspace:</strong> is used for business email and may process messages and contact details when you communicate with Livara.</li>
+          <li><strong>Google Analytics 4:</strong> provides website usage statistics and performance insights where the relevant tracking is enabled and consent has been obtained where required.</li>
+          <li><strong>Ketch:</strong> provides the website's consent-management functionality, allowing visitors to manage cookie and tracking preferences.</li>
+          <li><strong>Website hosting and infrastructure providers:</strong> deliver the website and may process technical information, such as server logs and IP addresses, to provide and secure the service.</li>
+        </ul>
+        <p>These providers process information under their own privacy terms and, where applicable, contractual data-processing arrangements. Livara does not sell personal information or share it with third parties for their own direct marketing.</p>
+        <p>Information may also be disclosed where necessary to comply with a legal obligation, respond to a lawful request or establish, exercise or defend legal claims.</p>
+      </section>
 
-  <h2>Contact</h2>
-  <p>If you have any questions about this Privacy Policy, please contact us at <a href="mailto:liv@livara.ie">liv@livara.ie</a>.</p>
-</div>
+      <section class="policy-section" aria-labelledby="cookies-analytics">
+        <h2 id="cookies-analytics">Cookies and website analytics</h2>
+        <p>The website uses Ketch to manage cookie and tracking preferences. It may use Google Analytics 4 to understand general website traffic and how visitors use the site.</p>
+        <p>Non-essential analytics cookies and similar tracking technologies should only be used where you have given the required consent. You can accept, reject or adjust your preferences through the cookie controls made available on the website. You can also withdraw or change your choice later through those controls.</p>
+        <p>For more information about the technologies used, their purposes and how to manage your choices, please read our <a href="cookies.html">Cookie Policy</a>.</p>
+        <div class="policy-note">Your browser may also offer settings to block or delete cookies. Blocking some cookies may affect how certain website features work.</div>
+      </section>
 
-<footer>
-  <div class="footer-logo">Livara</div>
-  <div class="footer-links">
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="cookies.html">Cookie Policy</a>
-    <a href="terms.html">Terms &amp; Conditions</a>
-  </div>
-  <div class="footer-copy">© 2026 Livara · Data · Website · Social</div>
-</footer>
+      <section class="policy-section" aria-labelledby="retention">
+        <h2 id="retention">How long we keep information</h2>
+        <p>Livara keeps personal information only for as long as it is reasonably needed for the purpose for which it was collected, including to respond to enquiries, provide services, maintain business records and meet legal obligations.</p>
+        <p>When information is no longer needed, it will be securely deleted or anonymised where appropriate. The period may vary depending on the type of information, whether you become a client and any legal record-keeping requirements that apply.</p>
+      </section>
+
+      <section class="policy-section" aria-labelledby="international">
+        <h2 id="international">Where information is processed</h2>
+        <p>Some of the service providers used by Livara may process or store information outside the European Economic Area (EEA). Where personal information is transferred internationally, the provider and Livara must rely on an appropriate transfer mechanism or safeguard required by data protection law.</p>
+      </section>
+
+      <section class="policy-section" aria-labelledby="your-rights">
+        <h2 id="your-rights">Your data protection rights</h2>
+        <p>Under the GDPR, you may have the right to:</p>
+        <ul>
+          <li>Request access to the personal information Livara holds about you.</li>
+          <li>Ask for inaccurate or incomplete information to be corrected.</li>
+          <li>Request deletion of your information in certain circumstances.</li>
+          <li>Ask for the use of your information to be restricted in certain circumstances.</li>
+          <li>Object to certain types of processing.</li>
+          <li>Request a copy of information you provided in a commonly used, machine-readable format where the right to data portability applies.</li>
+          <li>Withdraw consent at any time where processing is based on consent. This does not affect processing that took place before consent was withdrawn.</li>
+        </ul>
+        <p>These rights are subject to conditions and exemptions under data protection law. To make a request, email <a href="mailto:liv@livara.ie">liv@livara.ie</a>. Livara may need to verify your identity before responding.</p>
+        <p>You also have the right to make a complaint to the Irish Data Protection Commission. Information is available at <a href="https://www.dataprotection.ie/" target="_blank" rel="noopener noreferrer">dataprotection.ie</a>.</p>
+      </section>
+
+      <section class="policy-section" aria-labelledby="security">
+        <h2 id="security">How we protect information</h2>
+        <p>Livara takes reasonable technical and organisational steps to protect personal information against unauthorised access, loss, misuse or disclosure. However, no method of transmitting or storing information online can be guaranteed to be completely secure.</p>
+      </section>
+
+      <section class="policy-section" aria-labelledby="third-party-links">
+        <h2 id="third-party-links">Links to other websites</h2>
+        <p>This website may contain links to external websites. Livara is not responsible for the privacy practices or content of those websites. You should review their privacy information before providing them with personal information.</p>
+      </section>
+
+      <section class="policy-section" aria-labelledby="changes">
+        <h2 id="changes">Changes to this policy</h2>
+        <p>This policy may be updated from time to time to reflect changes to the website, the services Livara uses or applicable legal requirements. The latest version will be published on this page with its updated date.</p>
+      </section>
+
+      <section class="policy-contact" aria-labelledby="contact-privacy">
+        <p class="section-label">QUESTIONS ABOUT YOUR DATA?</p>
+        <h2 id="contact-privacy">Get in touch.</h2>
+        <p>If you have a question about this policy or want to exercise your data protection rights, contact Livara at <a href="mailto:liv@livara.ie">liv@livara.ie</a>.</p>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-main">
+      <a class="footer-brand" href="index.html">livara</a>
+      <nav class="footer-links" aria-label="Footer navigation"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a><a href="cookies.html">Cookies</a><a href="terms.html">Terms</a></nav>
+      <p class="footer-note">Digital performance for independent retail.</p>
+    </div>
+    <div class="footer-bottom"><div class="footer-bottom-inner"><span>© <span id="current-year">2026</span> Livara. All rights reserved.</span><a href="mailto:liv@livara.ie" style="text-decoration:none">liv@livara.ie</a></div></div>
+  </footer>
+
+  <script>
+    var themeToggle = document.getElementById('theme-toggle');
+    var themeSymbol = themeToggle.querySelector('.theme-symbol');
+    var themeLabel = themeToggle.querySelector('.theme-label');
+    function updateThemeButton() {
+      var darkMode = document.documentElement.getAttribute('data-theme') === 'dark';
+      themeSymbol.textContent = darkMode ? '☀' : '☾';
+      themeLabel.textContent = darkMode ? 'Light mode' : 'Dark mode';
+      themeToggle.setAttribute('aria-label', darkMode ? 'Switch to light mode' : 'Switch to dark mode');
+    }
+    themeToggle.addEventListener('click', function () {
+      var newTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', newTheme);
+      try { localStorage.setItem('livara-theme', newTheme); } catch (error) {}
+      updateThemeButton();
+    });
+    updateThemeButton();
+
+    var menuToggle = document.getElementById('menu-toggle');
+    var mainNav = document.getElementById('main-nav');
+    menuToggle.addEventListener('click', function () {
+      var isOpen = mainNav.classList.toggle('is-open');
+      menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      menuToggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
+      menuToggle.textContent = isOpen ? 'Close' : 'Menu';
+    });
+    mainNav.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        mainNav.classList.remove('is-open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.setAttribute('aria-label', 'Open navigation');
+        menuToggle.textContent = 'Menu';
+      });
+    });
+
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
 </body>
-</html>
